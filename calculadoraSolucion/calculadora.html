@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Documento sin título</title>
+        <style type="text/css">
+            #form1 p {
+                font-family: Arial Black, Gadget, sans-serif;
+            }
+            #form1 table {
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="form1" name="form1" method="post" action="calculadora.php">
+            <p align="center">CALCULADORA</p>
+            <p align="center">
+                Numero1:
+                <label for="N1"></label>
+                <input type="text" name="N1" id="N1" />
+                Numero2:
+                <label for="N2"></label>
+                <input type="text" name="N2" id="N2" />
+                <img src="calculator.jpg" width="88" height="92" />
+            </p>
+            <p>&nbsp;</p>
+            <div align="center">
+                <table width="637" border="2" cellpadding="2">
+                    <tr>
+                        <td width="109">
+                            <input
+                                name="radio"
+                                type="radio"
+                                id="Sumar"
+                                value="Sumar"
+                                checked="checked"
+                            />
+                            <label for="Sumar">Sumar</label>
+                        </td>
+                        <td width="114">
+                            <input
+                                type="radio"
+                                name="radio"
+                                id="Restar"
+                                value="Restar"
+                            />
+                            <label for="Restar">Restar</label>
+                        </td>
+                        <td width="169">
+                            <input
+                                type="radio"
+                                name="radio"
+                                id="Multiplicar"
+                                value="Multiplicar"
+                            />
+                            <label for="Multiplicar">Multiplicar</label>
+                        </td>
+                        <td width="207">
+                            <input
+                                type="radio"
+                                name="radio"
+                                id="Dividir"
+                                value="Dividir"
+                            />
+                            <label for="Dividir">Dividir</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                <input type="submit" name="button" id="button" value="Enviar" />
+                <input
+                    type="reset"
+                    name="button2"
+                    id="button2"
+                    value="Restablecer"
+                />
+            </p>
+        </form>
+    </body>
+</html>
