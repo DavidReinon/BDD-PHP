@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--David Reinon-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Documento sin título</title>
+    </head>
+
+    <body>
+        <form id="form1" name="form1" method="post" action="figuras.php">
+            <p>FIGURA:</p>
+            <p>
+                <input
+                    type="radio"
+                    name="eleccion"
+                    value="botonPentagono"
+                    checked
+                />
+                <label for="botonPentagono">Pentagono</label>
+                <input type="radio" name="eleccion" value="botonHexagono" />
+                <label for="botonHexagono">Hexagono</label>
+            </p>
+            <p>CALCULO A REALIZAR:</p>
+            <p>
+                <input type="radio" name="eleccion2" value="botonArea" />
+                <label for="botonArea">Area</label>
+                <input
+                    type="radio"
+                    name="eleccion2"
+                    value="botonPerimetro"
+                    checked
+                />
+                <label for="botonPerimetro">Perimetro</label>
+            </p>
+            <p>DATOS DE LA FIGURA:</p>
+            <p>
+                <label for="apotema">Apotema de la figura:</label>
+                <input type="text" name="apotema" id="apotema" />
+            </p>
+            <p>
+                <label for="lado">Lado de la figura:</label>
+                <input type="text" name="lado" id="lado" />
+            </p>
+            <p>
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+                <input
+                    type="reset"
+                    name="borrar"
+                    id="borrar"
+                    value="Restablecer"
+                />
+            </p>
+        </form>
+    </body>
+</html>
