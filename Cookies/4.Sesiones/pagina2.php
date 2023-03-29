@@ -1,22 +1,18 @@
 <?php
 session_start();
-$_SESSION["usuario"] = $_REQUEST["usuario"];
-$_SESSION["contra"] = $_REQUEST["contra"];
+$_SESSION["usuario"] = $_REQUEST["campousuario"];
+$_SESSION["clave"] = $_REQUEST["campoclave"];
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
 
 <body>
-    Variables de sesion creadas.
-    <a href="pagina3.php"> Vuelve </a>
+    SE HAN CREADO LAS VBLES DE SESION
+    <br>
+    <a href="pg3.php">Ir a la otra página</a>
 </body>
 
 </html>
