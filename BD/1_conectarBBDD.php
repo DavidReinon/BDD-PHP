@@ -1,0 +1,11 @@
+<?php
+$servidor="localhost";
+$usuario="root";
+$clave="";
+
+@$mysqli = new mysqli($servidor, $usuario, $clave);
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+} else {
+    echo "Se ha conectado al servidor MySQL";
+}
