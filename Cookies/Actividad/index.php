@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form id="form1" name="form1" method="post" action="pag1.php">
+    <form id="form1" name="form1" method="post" action="cookies.php">
         <p>Fondo:</p>
         <p>
             <input type="radio" name="radio1" id="azul" value="azul" checked />
@@ -47,12 +47,10 @@
     <p> Contador de visitas:
         <?php
         session_start();
-        if (isset($_SESSION['contador']))
-            echo $_SESSION['contador'];
-        else {
+        if (!isset($_SESSION['contador']))
             $_SESSION["contador"] = 0;
-            echo "0";
-        }
+            
+        echo $_SESSION["contador"];
         ?>
     </p>
 </body>

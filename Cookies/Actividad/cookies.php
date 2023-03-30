@@ -1,5 +1,8 @@
 <?php
 
+setcookie("colorFondo", "__", time() - 1000, "/");
+setcookie("colorLetra", "__", time() - 1000, "/");
+
 if ($_REQUEST['radio1'] == "azul")
     $colorFondo = "006AFF";
 elseif ($_REQUEST['radio1'] == "rojo")
@@ -17,3 +20,5 @@ elseif ($_REQUEST['radio2'] == "verde")
     $colorLetra = "17FF00";
 
 setcookie("colorLetra", $colorLetra, time() + 60 * 60 * 24 * 365, "/");
+
+header("Location: pag1.php");

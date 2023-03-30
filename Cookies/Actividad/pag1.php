@@ -3,7 +3,6 @@
 session_start();
 $_SESSION["contador"] += 1;
 
-require_once "cookies.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,7 @@ require_once "cookies.php";
     <title>Document</title>
 </head>
 
-<body <?php if (isset($_COOKIE['colorLetra'])) echo " color=\"$_COOKIE[colorLetra]\"";
+<body <?php if (isset($_COOKIE['colorLetra'])) echo " text=\"$_COOKIE[colorLetra]\"";
         if (isset($_COOKIE['colorFondo'])) echo " bgcolor=\"$_COOKIE[colorFondo]\"";
         ?>>
     <h1>TITULO DE LA PAGINA</h1>
