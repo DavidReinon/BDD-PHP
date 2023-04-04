@@ -1,4 +1,5 @@
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR);
 $servidor="localhost";
 $usuario="root";
 $clave="";
