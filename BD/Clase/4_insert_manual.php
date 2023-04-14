@@ -1,6 +1,6 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
-require("usarGESTIONA.php");
+require("3_usarGESTIONA.php");
 
 $consulta = "INSERT INTO proveedores (codigoProveedor, nombreProveedor,direccionProveedor,
 telefonoProveedor, ciudadProveedor, provinciaProveedor, emailProveedor)
