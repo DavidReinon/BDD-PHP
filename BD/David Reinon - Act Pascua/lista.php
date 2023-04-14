@@ -1,8 +1,8 @@
 <?php
+//David Reinón García
 
 /*Desarrollar el código PHP/HTML que permita desplegar un control tipo lista en un formulario
 que se cargue con los nombres de los productos y su código */
-
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("usarGESTIONA.php");
 $consulta = "SELECT codigoproducto, descripcionproducto FROM productos;";
