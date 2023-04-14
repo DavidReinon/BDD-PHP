@@ -18,7 +18,7 @@
 
         <?php
         mysqli_report(MYSQLI_REPORT_ERROR);
-        require("usarGESTIONA.php");
+        require("3_usarGESTIONA.php");
 
         $consulta = "SELECT * FROM productos where precioCompraProducto<15.00;";
 
