@@ -8,8 +8,6 @@
 
 <body>
   <form id="form1" name="form1" method="post" action="accion_borrar.php">
-    <p>BORRADO DE PRODUCTO
-    </p>
     <p>
       <label for="codigo">CODIGO PRODUCTO:</label>
       <input type="text" name="codigo" id="codigo" readonly="readonly" value="<?php echo ($_REQUEST['listado']); ?>" />
@@ -27,6 +25,7 @@
       echo "Error: " . $mysqli->error . "<br>";
       exit;
     }
+
     while ($fila = $resultado->fetch_assoc()) {
       echo "<p><label for='descripcion'>Descripcion</label>
     <input type='text' name='descripcion' id='descripcion' value='" . $fila['descripcionproducto'] . "' readonly='readonly'   />  </p>";
@@ -43,7 +42,7 @@
     }
     ?>
     <p>
-      <input type="submit" name="BORRAR" id="BORRAR" value="Borrar registro" />
+      <input type="submit" name="BORRAR/MODIFICAR" id="BORRAR/MODIFICAR" value="BORRAR/MODIFICAR" />
     </p>
   </form>
 </body>
