@@ -7,10 +7,10 @@
 </head>
 
 <body>
-  <p>acceso a la BBDD para borrar REGISTROS</p>
-  <form id="form1" name="form1" method="post" action="borrar_producto.php">
+  <p>Listado de piezas</p>
+  <form id="form1" name="form1" method="post" action="MoB_producto.php">
     <p>
-      <label for="listado">Piezas :</label>
+      <label for="listado">Listado Productos:</label>
       <select name="listado" size="1" id="listado">
 
         <?php
@@ -28,7 +28,7 @@
     <p><input type="radio" name="seleccion" id="Modificar" value="Modificar">
       <label for="Modificar">Modificar</label><br>
     </p>
-    <p><input type="radio" id="Borrar" name="seleccion" value="Borrar">
+    <p><input type="radio" name="seleccion" id="Borrar" value="Borrar">
       <label for="Borrar">Borrar</label><br>
     </p>
     <p>
