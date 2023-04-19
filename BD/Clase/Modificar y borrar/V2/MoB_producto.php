@@ -41,7 +41,7 @@
     <input type='text' name='descripcion' id='descripcion' value='" . $fila['descripcionproducto'] . "' $readonly  /></p>";
 
         echo /*html*/ "<p><label for='proveedor'>Proveedor</label>
-    <input type='text' name='proveedor' id='proveedor' value='" . $fila['codigoproveedorproducto'] . "' $readonly  /></p>";
+    <input type='text' name='proveedor' id='proveedor' value='" . $fila['codigoproveedorproducto'] . "' readonly='readonly'  /></p>";
 
         echo /*html*/ "<p><label for='preciocompra'>Preciocompra</label>
     <input type='text' name='preciocompra' id='preciocompra' value='" . $fila['preciocompraproducto'] . "' $readonly  /></p>";
