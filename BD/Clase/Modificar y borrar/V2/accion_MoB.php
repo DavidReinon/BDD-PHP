@@ -1,4 +1,5 @@
 <?php
+//DAVID REINON GARCIA
 mysqli_report(MYSQLI_REPORT_ERROR);
 require "usargestiona.php";
 $codigo = $_REQUEST["codigo"];
