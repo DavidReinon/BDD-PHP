@@ -35,22 +35,22 @@
       }
 
       while ($fila = $resultado->fetch_assoc()) {
-        echo "<label for='accion'>Accion a ejecutar</label>
+        echo /*html*/"<label for='accion'>Accion a ejecutar</label>
       <input type='text' name='accion' id='accion' value=$accion readonly='readonly' style='background-color: red; color: yellow;'  /></p>";
 
-        echo "<p><label for='descripcion'>Descripcion</label>
+        echo /*html*/"<p><label for='descripcion'>Descripcion</label>
     <input type='text' name='descripcion' id='descripcion' value='" . $fila['descripcionproducto'] . "' $readonly  /></p>";
 
-        echo "<p><label for='proveedor'>Proveedor</label>
+        echo /*html*/"<p><label for='proveedor'>Proveedor</label>
     <input type='text' name='proveedor' id='proveedor' value='" . $fila['codigoproveedorproducto'] . "' readonly='readonly'  /></p>";
 
-        echo "<p><label for='preciocompra'>Preciocompra</label>
+        echo /*html*/"<p><label for='preciocompra'>Preciocompra</label>
     <input type='text' name='preciocompra' id='preciocompra' value='" . $fila['preciocompraproducto'] . "' $readonly  /></p>";
 
-        echo "<p><label for='precioventa'>Precioventa</label>
+        echo /*html*/"<p><label for='precioventa'>Precioventa</label>
     <input type='text' name='precioventa' id='precioventa' value='" . $fila['precioventaproducto'] . "' $readonly  /></p>";
 
-        echo "<p><label for='stock'>Stock</label>
+        echo /*html*/"<p><label for='stock'>Stock</label>
     <input type='text' name='stock' id='stock' value='" . $fila['stockproducto'] . "' $readonly   />  </p>";
       }
       ?>
