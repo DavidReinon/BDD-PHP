@@ -1,6 +1,5 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
-require("funciones.php");
 require("conexion_BD.php");
 
 $baseDatos = "academia";
