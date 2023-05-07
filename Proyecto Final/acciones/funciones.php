@@ -1,12 +1,4 @@
 <?php
-function ErrorConexion($mysqli)
-{
-    if ($mysqli->connect_errno) {
-        echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-        die("Salida del programa. Error acceso a BBDD");
-    }
-}
-
 function ErrorConsulta($mysqli, $consulta)
 {
     if (!$resultado = $mysqli->query($consulta)) {
