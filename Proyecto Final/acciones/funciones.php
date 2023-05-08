@@ -15,6 +15,6 @@ function ErrorConsulta($mysqli, $consulta)
         echo "Error: " . $mysqli->error . "<br>";
         return false;
     }
-    return array($resultado, true);
+    return $resultado;
 }
 

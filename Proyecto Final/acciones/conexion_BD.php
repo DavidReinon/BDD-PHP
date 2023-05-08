@@ -5,6 +5,7 @@ require("funciones.php");
 $servidor = "localhost";
 $usuario = "root";
 $clave = "";
+$database = "academia";
 
-@$mysqli = new mysqli($servidor, $usuario, $clave);
+@$mysqli = new mysqli($servidor, $usuario, $clave, $database);
 ErrorConexion($mysqli);
