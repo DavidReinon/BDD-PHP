@@ -19,14 +19,19 @@ $columns = mysqli_fetch_fields($resultado);
 </head>
 
 <body>
+    <h1>Datos de CLASES</h1>
+    <form action="">
+        <button type="submit">Crear Nueva Clase</button>
+    </form>
+    
     <?php
+    echo "<form method='post'>";
     echo "<table>";
     echo "<tr>";
     foreach ($columns as $column) {
         echo "<th>" . $column->name . "</th>";
     }
     echo "</tr>";
-
     while ($fila = mysqli_fetch_array($resultado)) {
         echo "<tr>";
         echo "<td>" . $fila['id'] . "</td>";
@@ -35,10 +40,13 @@ $columns = mysqli_fetch_fields($resultado);
         echo "<td>" . $fila['sala'] . "</td>";
         echo "<td>" . $fila['materia'] . "</td>";
         echo "<td>" . $fila['dniAlumno'] . "</td>";
+        echo "<td> <button type='submit' formaction=''>Editar</button>";
+        echo "<p> <button type='submit' formaction=''>Eliminar</button> <p>";
+        echo "</td>";
         echo "</tr>";
     }
-
     echo "</table>";
+    echo "</form>";
     ?>
 </body>
 
