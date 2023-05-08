@@ -2,7 +2,7 @@
 require("conexion_BD.php");
 
 $consulta = "SELECT * FROM clases;";
-$resultado = ErrorConsulta($mysqli, $consulta);
+$resultado = ErrorConsulta($mysqli, $consulta)["result"];
 
 $columns = mysqli_fetch_fields($resultado);
 ?>
@@ -20,7 +20,7 @@ $columns = mysqli_fetch_fields($resultado);
 
 <body>
     <h1>Datos de CLASES</h1>
-    <form action="crear_clase.php">
+    <form action="insert clase/crear_clase.html">
         <button type="submit">Crear Nueva Clase</button>
     </form>
     

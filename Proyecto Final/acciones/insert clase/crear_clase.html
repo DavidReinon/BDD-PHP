@@ -1,0 +1,51 @@
+<html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="stylesheet" href="../css/crear_clase.css" />
+            <title>Dar de alta clase</title>
+        </head>
+        <body>
+            <form
+                id="form1"
+                name="form1"
+                method="post"
+                action="crear_clase.php"
+            >
+                <p>
+                    <label for="dia">Dia:</label>
+                    <input type="date" name="dia" id="dia" />
+                </p>
+                <p>
+                    <label for="hora">Hora:</label>
+                    <input type="time" name="hora" id="hora" />
+                </p>
+                <p>
+                    <label for="sala">Sala:</label>
+                    <input type="text" name="sala" id="sala" />
+                </p>
+                <p>
+                    <label for="materia">Materia:</label>
+                    <input type="text" name="materia" id="materia" />
+                </p>
+                <p>
+                    <label for="DNI Alumno">DNI Alumno:</label>
+                    <input type="text" maxlength="9" name="dni" id="dni" />
+                </p>
+                <p>
+                    <input
+                        type="submit"
+                        name="Dar de alta"
+                        id="alta"
+                        value="Dar de alta"
+                    />
+                </p>
+            </form>
+        </body>
+    </html>
+</html>

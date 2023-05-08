@@ -13,8 +13,13 @@ function ErrorConsulta($mysqli, $consulta)
         echo "Error en $consulta <br>";
         echo "Num.error: " . $mysqli->errno . "<br>";
         echo "Error: " . $mysqli->error . "<br>";
-        return false;
+        return [
+            "result" => $resultado,
+            "bool" => true
+        ];
     }
-    return $resultado;
+    return [
+        "result" => $resultado,
+        "bool" => false
+    ];
 }
-
