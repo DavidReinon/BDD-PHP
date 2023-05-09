@@ -16,7 +16,7 @@
         <button type="submit" formaction="../mostrar_datos_clases.php">Volver a lista Completa</button>
     </form>
     <h2>Consultar clases con parametros</h2>
-    <form name="formBuscar" method="post" action="buscar_clases.php">
+    <form name="formBuscar" method="post" action="buscar_clase.php">
         <p>
             <h3>Clases:</h3>
             <label for="dia">Dia:</label>
