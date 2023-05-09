@@ -18,6 +18,7 @@
     <h2>Consultar clases con parametros</h2>
     <form name="formBuscar" method="post" action="buscar_clases.php">
         <p>
+            <h3>Clases:</h3>
             <label for="dia">Dia:</label>
             <input type="date" name="dia" id="dia" />
 
@@ -26,13 +27,20 @@
 
             <label for="sala">Sala:</label>
             <input type="text" name="sala" id="sala" />
-        </p>
-        <p>
+
             <label for="materia">Materia:</label>
             <input type="text" name="materia" id="materia" />
-
-            <label for="DNI Alumno">DNI Alumno:</label>
+        </p>
+        <p>
+            <h3>Alumnos:</h3>
+            <label for="dni">DNI:</label>
             <input type="text" maxlength="9" name="dni" id="dni" />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" />
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" />
         </p>
         <p>
             <input type="submit" name="Buscar Clases" id="alta" value="Buscar Clases" />
@@ -47,8 +55,11 @@
     $sala = $_POST['sala'];
     $materia = $_POST['materia'];
     $dni = $_POST['dni'];
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
 
-    $consulta = "SELECT * FROM clases WHERE 1=1";
+    $consulta = "SELECT c.*, a.nombre, a.apellidos FROM clases c 
+    INNER JOIN alumnos a ON c.dniAlumno = a.dni WHERE 1=1";
     $mostrarInfo = "PARAMETROS DE BUSQUEDA: ";
 
     if (!empty($dia)) {
@@ -73,9 +84,21 @@
         $mostrarInfo .= "| Materia: $materia |";
     }
 
-    if (!empty($dniAlumno)) {
+    if (!empty($dni)) {
         $consulta .= " AND dniAlumno = '$dni'";
-        $mostrarInfo .= "| DNI Alumno: $dni |";
+        $mostrarInfo .= "| DNI: $dni |";
+    }
+
+    if (!empty($nombre)) {
+        $nombre = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($nombre)));
+        $consulta .= " AND nombre = '$nombre'";
+        $mostrarInfo .= "| Nombre: $nombre |";
+    }
+
+    if (!empty($apellidos)) {
+        $apellidos = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($apellidos)));
+        $consulta .= " AND apellidos = '$apellidos'";
+        $mostrarInfo .= "| Apellidos: $apellidos |";
     }
 
     $datos_consulta = ErrorConsulta($mysqli, $consulta);
@@ -105,6 +128,8 @@
         echo "<td>" . $fila['sala'] . "</td>";
         echo "<td>" . $fila['materia'] . "</td>";
         echo "<td>" . $fila['dniAlumno'] . "</td>";
+        echo "<td>" . $fila['nombre'] . "</td>";
+        echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td> <button type='submit' formaction=''>Editar</button>";
         echo "<p> <button type='submit' formaction=''>Eliminar</button> <p>";
         echo "</td>";
