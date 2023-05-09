@@ -27,29 +27,29 @@ $columns = mysqli_fetch_fields($resultado);
     <h2>Consultar clases con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <p>
-            <h3>Clases:</h3>
-            <label for="dia">Dia:</label>
-            <input type="date" name="dia" id="dia" />
+        <h3>Clases:</h3>
+        <label for="dia">Dia:</label>
+        <input type="date" name="dia" id="dia" />
 
-            <label for="hora">Hora:</label>
-            <input type="time" name="hora" id="hora" />
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" />
 
-            <label for="sala">Sala:</label>
-            <input type="text" name="sala" id="sala" />
+        <label for="sala">Sala:</label>
+        <input type="text" name="sala" id="sala" />
 
-            <label for="materia">Materia:</label>
-            <input type="text" name="materia" id="materia" />
+        <label for="materia">Materia:</label>
+        <input type="text" name="materia" id="materia" />
         </p>
         <p>
-            <h3>Alumnos:</h3>
-            <label for="dni">DNI:</label>
-            <input type="text" maxlength="9" name="dni" id="dni" />
+        <h3>Alumnos:</h3>
+        <label for="dni">DNI:</label>
+        <input type="text" maxlength="9" name="dni" id="dni" />
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" />
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" />
 
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" name="apellidos" id="apellidos" />
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" />
         </p>
         <p>
             <input type="submit" name="Buscar Clases" id="alta" value="Buscar Clases" />
@@ -64,8 +64,9 @@ $columns = mysqli_fetch_fields($resultado);
     }
     echo "</tr>";
     while ($fila = mysqli_fetch_array($resultado)) {
+        $idClase = $fila['id'];
         echo "<tr>";
-        echo "<td>" . $fila['id'] . "</td>";
+        echo "<td>" . $idClase . "</td>";
         echo "<td>" . $fila['dia'] . "</td>";
         echo "<td>" . $fila['hora'] . "</td>";
         echo "<td>" . $fila['sala'] . "</td>";
@@ -74,7 +75,8 @@ $columns = mysqli_fetch_fields($resultado);
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td> <button type='submit' formaction=''>Editar</button>";
-        echo "<p> <button type='submit' formaction=''>Eliminar</button> <p>";
+        echo "<p> <button type='submit' value='" . $idClase . "' 
+        formaction='eliminar clase/eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
     }
