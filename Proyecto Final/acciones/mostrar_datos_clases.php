@@ -2,7 +2,7 @@
 require("conexion_BD.php");
 
 $consulta = "SELECT * FROM clases;";
-$resultado = ErrorConsulta($mysqli, $consulta)["result"];
+$resultado = ErrorConsulta($mysqli, $consulta)["resultado"];
 
 $columns = mysqli_fetch_fields($resultado);
 ?>

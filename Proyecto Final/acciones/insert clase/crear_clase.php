@@ -16,8 +16,16 @@ WHERE NOT EXISTS (
     WHERE sala = '$sala' AND dia = '$dia' AND hora = '$hora'
 );";
 
-if (!ErrorConsulta($mysqli, $consulta)["bool"]) {
-    echo "Clase creada correctamente";
+$datos_consulta = ErrorConsulta($mysqli, $consulta);
+$resultado = $datos_consulta["resultado"];
+$error = $datos_consulta["bool"];
+
+if ($resultado && mysqli_affected_rows($mysqli) == 0) {
+    echo "Ya existe una clase creada en esa sala a esa hora y dia.";
+    echo "<br><a href='../crear_clase.html'>Volver a crear clase</a>";
     echo "<br><a href='../index.html'>Volver al index</a>";
+} elseif (!$error) {
+    echo "Clase creada correctamente";
     echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro de clases</a>";
+    echo "<br><a href='../index.html'>Volver al index</a>";
 }
