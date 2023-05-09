@@ -26,6 +26,6 @@ if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "<br><a href='../index.html'>Volver al index</a>";
 } elseif (!$error) {
     echo "Clase creada correctamente";
-    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro de clases</a>";
+    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
     echo "<br><a href='../index.html'>Volver al index</a>";
 }
