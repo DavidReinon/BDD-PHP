@@ -2,11 +2,11 @@
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("conexion_BD.php");
 
-$baseDatos = "academia";
-$consulta = "CREATE DATABASE IF NOT EXISTS $baseDatos;";
+$database = "academia";
+$consulta = "CREATE DATABASE IF NOT EXISTS $database;";
 ErrorConsulta($mysqli, $consulta);
 
-$mysqli->select_db($baseDatos);
+$mysqli->select_db($database);
 
 $consulta = "CREATE TABLE IF NOT EXISTS alumnos ";
 $consulta .= "(dni CHAR(9),";
@@ -24,6 +24,7 @@ $consulta .= "hora TIME NOT NULL, ";
 $consulta .= "sala VARCHAR(45), ";
 $consulta .= "materia VARCHAR(45), ";
 $consulta .= "dniAlumno CHAR(9) NOT NULL, ";
-$consulta .= "FOREIGN KEY (dniAlumno) REFERENCES alumnos(dni), ";
+$consulta .= "ADD CONSTRAINT fk_clases_alumnos 
+FOREIGN KEY (dniAlumno) REFERENCES alumnos(dni) ON DELETE CASCADE, ";
 $consulta .= "PRIMARY KEY (id)); ";
 ErrorConsulta($mysqli, $consulta);
