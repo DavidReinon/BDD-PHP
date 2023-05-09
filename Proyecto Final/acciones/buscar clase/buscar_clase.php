@@ -121,8 +121,9 @@
     }
     echo "</tr>";
     while ($fila = mysqli_fetch_array($resultado)) {
+        $idClase = $fila['id'];
         echo "<tr>";
-        echo "<td>" . $fila['id'] . "</td>";
+        echo "<td>" . $idClase . "</td>";
         echo "<td>" . $fila['dia'] . "</td>";
         echo "<td>" . $fila['hora'] . "</td>";
         echo "<td>" . $fila['sala'] . "</td>";
@@ -131,8 +132,8 @@
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td> <button type='submit' formaction=''>Editar</button>";
-        echo "<p> <button type='submit' value='" . $idClase . "' 
-        formaction='eliminar clase/eliminar_clase.php'>Eliminar</button><p>";
+        echo "<p> <button type='submit' name='id' value='" . $idClase . "' 
+        formaction='../eliminar clase/eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
     }
