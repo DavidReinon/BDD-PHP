@@ -11,7 +11,14 @@ ErrorConexion($mysqli);
 
 $database = "academia";
 $consulta = "CREATE DATABASE IF NOT EXISTS $database;";
-ErrorConsulta($mysqli, $consulta);
+
+$datos_consulta = ErrorConsulta($mysqli, $consulta);
+$error = $datos_consulta["bool"];
+
+if ($error) {
+    echo "<br><a href='../../Index.html'>Volver al index</a>";
+    die();
+}
 
 $mysqli->select_db($database);
 
@@ -22,7 +29,13 @@ $consulta .= "apellidos VARCHAR(45), ";
 $consulta .= "telefono CHAR(9) NOT NULL, ";
 $consulta .= "fechaNacimiento DATE, ";
 $consulta .= "PRIMARY KEY (dni)); ";
-ErrorConsulta($mysqli, $consulta);
+$datos_consulta = ErrorConsulta($mysqli, $consulta);
+$error = $datos_consulta["bool"];
+
+if ($error) {
+    echo "<br><a href='../../Index.html'>Volver al index</a>";
+    die();
+}
 
 $consulta = "CREATE TABLE IF NOT EXISTS clases ";
 $consulta .= "(id INT AUTO_INCREMENT,";
@@ -31,7 +44,12 @@ $consulta .= "hora TIME NOT NULL, ";
 $consulta .= "sala VARCHAR(45), ";
 $consulta .= "materia VARCHAR(45), ";
 $consulta .= "dniAlumno CHAR(9) NOT NULL, ";
-$consulta .= "ADD CONSTRAINT fk_clases_alumnos 
-FOREIGN KEY (dniAlumno) REFERENCES alumnos(dni) ON DELETE CASCADE, ";
+$consulta .= "FOREIGN KEY (dniAlumno) REFERENCES alumnos(dni) ON DELETE CASCADE, ";
 $consulta .= "PRIMARY KEY (id)); ";
-ErrorConsulta($mysqli, $consulta);
+
+$datos_consulta = ErrorConsulta($mysqli, $consulta);
+$error = $datos_consulta["bool"];
+
+if ($error) {
+    echo "<br><a href='../../Index.html'>Volver al index</a>";
+}
