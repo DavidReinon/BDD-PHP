@@ -1,6 +1,6 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
-require("crear_BD.php");
+require("conexion_BD.php");
 
 $consulta = "INSERT INTO alumnos (dni, nombre, apellidos, telefono, fechaNacimiento) VALUES
 ('11111111A', 'Juan', 'García Pérez', '910118877', '1990-01-01'),
