@@ -119,6 +119,7 @@
     foreach ($columns as $column) {
         echo "<th>" . $column->name . "</th>";
     }
+    echo "<th>Acciones</th>";
     echo "</tr>";
     while ($fila = mysqli_fetch_array($resultado)) {
         $idClase = $fila['id'];
