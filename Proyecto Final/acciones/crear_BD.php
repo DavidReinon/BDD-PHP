@@ -1,6 +1,13 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
-require("conexion_BD.php");
+require("funciones.php");
+
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+
+@$mysqli = new mysqli($servidor, $usuario, $clave);
+ErrorConexion($mysqli);
 
 $database = "academia";
 $consulta = "CREATE DATABASE IF NOT EXISTS $database;";
