@@ -3,8 +3,7 @@ mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
 
 $id = $_POST['id'];
-//echo "Estas seguro de eliminar el siguiente registro";
-//Segunedo spreen
+
 $consulta = "DELETE FROM clases WHERE id = '$id'";
 
 $datos_consulta = ErrorConsulta($mysqli, $consulta);
@@ -18,5 +17,5 @@ if ($resultado && mysqli_affected_rows($mysqli) == 0) {
 } elseif (!$error) {
     echo "Registro eliminado correctamente";
     echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
-    echo "<br><a href='../index.html'>Volver al index</a>";
+    echo "<br><a href='../../Index.html'>Volver al index</a>";
 }

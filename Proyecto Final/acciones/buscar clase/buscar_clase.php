@@ -135,7 +135,7 @@
         echo "<td> <button type='submit' name='id' value='" . $idClase . "' 
         formaction='modificar clase/formulario_modificar.php'>Editar</button>";
         echo "<p> <button type='submit' name='id' value='" . $idClase . "' 
-        formaction='../eliminar clase/eliminar_clase.php'>Eliminar</button><p>";
+        formaction='../eliminar clase/confirmacion_eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
     }
