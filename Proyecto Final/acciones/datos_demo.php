@@ -13,10 +13,9 @@ $consulta = "INSERT INTO alumnos (dni, nombre, apellidos, telefono, fechaNacimie
 ('88888888H', 'Isabel', 'González López', '719998877', '1997-01-01'),
 ('99999999I', 'Javier', 'Rodríguez Gómez', '619995877', '1998-01-01'),
 ('00000000J', 'Laura', 'García Pérez', '612398877', '1998-01-01');";
-echo $consulta . "<br><br>";
 
-if (!ErrorConsulta($mysqli, $consulta)["bool"]) {
-    echo $consulta . "<br><br>";
+if (ErrorConsulta($mysqli, $consulta)["bool"]) {
+    echo "Datos en tabla alumnos insertados correctamente <br><br>";
 }
 
 $consulta = "INSERT INTO clases (id, dia, hora, sala, materia, dniAlumno) VALUES
@@ -36,6 +35,6 @@ $consulta = "INSERT INTO clases (id, dia, hora, sala, materia, dniAlumno) VALUES
 (14, '2022-04-02', '13:00:00', 'A1', 'Valenciano', '44444444D'),
 (15, '2022-06-02', '14:00:00', 'A1', 'Matemáticas', '55555555E');";
 
-if (!ErrorConsulta($mysqli, $consulta)["bool"]) {
-    echo $consulta . "<br><br>";
+if (ErrorConsulta($mysqli, $consulta)["bool"]) {
+    echo "Datos en tabla clases insertados correctamente <br><br>";
 }

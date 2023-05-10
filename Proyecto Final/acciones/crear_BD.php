@@ -10,19 +10,19 @@ $clave = "";
 ErrorConexion($mysqli);
 
 $database = "academia";
-$consulta = "CREATE DATABASE IF NOT EXISTS $database;";
+$consulta = "CREATE DATABASE $database;";
 
 $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
 
 if ($error) {
-    echo "<br><a href='../../Index.html'>Volver al index</a>";
+    echo "<br><a href='../Index.html'>Volver al index</a>";
     die();
 }
+echo "Base de datos creada 'academia' creada correctamente<br>";
 
 $mysqli->select_db($database);
-
-$consulta = "CREATE TABLE IF NOT EXISTS alumnos ";
+$consulta = "CREATE TABLE alumnos ";
 $consulta .= "(dni CHAR(9),";
 $consulta .= "nombre VARCHAR(45) NOT NULL, ";
 $consulta .= "apellidos VARCHAR(45), ";
@@ -33,11 +33,12 @@ $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
 
 if ($error) {
-    echo "<br><a href='../../Index.html'>Volver al index</a>";
+    echo "<br><a href='../Index.html'>Volver al index</a>";
     die();
 }
+echo "Tabla 'alumnos' creada correctamente<br>";
 
-$consulta = "CREATE TABLE IF NOT EXISTS clases ";
+$consulta = "CREATE TABLE clases ";
 $consulta .= "(id INT AUTO_INCREMENT,";
 $consulta .= "dia DATE NOT NULL, ";
 $consulta .= "hora TIME NOT NULL, ";
@@ -50,6 +51,7 @@ $consulta .= "PRIMARY KEY (id)); ";
 $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
 
-if ($error) {
-    echo "<br><a href='../../Index.html'>Volver al index</a>";
+if (!$error) {
+    echo "Tabla 'clases' creada correctamente<br>";
 }
+echo "<br><a href='../Index.html'>Volver al index</a>";
