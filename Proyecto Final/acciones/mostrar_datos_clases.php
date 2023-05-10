@@ -24,6 +24,7 @@ $columns = mysqli_fetch_fields($resultado);
     <form action="insert clase/crear_clase.html">
         <button type="submit">Crear Nueva Clase</button>
     </form>
+    <a href='../index.html'><button type="submit">Volver Index</button></a>
     <h2>Consultar clases con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <p>

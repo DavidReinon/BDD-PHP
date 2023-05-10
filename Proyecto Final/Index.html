@@ -7,19 +7,33 @@
     </head>
     <body>
         <h1>Gestion Academia Clases Particulares</h1>
+        <h2>Elige una opción:</h2>
         <form>
-            <h2>Elige una opción:</h2>
             <button type="submit" formaction="crear_BD.php">
                 Crear Base de Datos
             </button>
-            <button type="submit" formaction="acciones/confirmacion_borrar_BD.php">
+            <button
+                type="submit"
+                formaction="acciones/confirmacion_borrar_BD.php"
+            >
                 Borrar Base de Datos
             </button>
             <button type="submit" formaction="acciones/datos_demo.php">
                 Cargar Datos Demo
             </button>
-            <button type="submit" formaction="acciones/mostrar_datos_clases.php">
-                Acceder a la Informacion
+        </form>
+        <form>
+            <button
+                type="submit"
+                formaction="acciones/mostrar_datos_clases.php"
+            >
+                Informacion CLASES
+            </button>
+            <button
+                type="submit"
+                formaction="acciones/mostrar_datos_alumnos.php"
+            >
+                Informacion ALUMNOS
             </button>
         </form>
     </body>

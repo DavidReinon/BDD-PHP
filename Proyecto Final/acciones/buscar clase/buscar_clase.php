@@ -15,6 +15,7 @@
         <button type="submit">Crear Nueva Clase</button>
         <button type="submit" formaction="../mostrar_datos_clases.php">Volver a lista Completa</button>
     </form>
+    <a href='../../Index.html'><button type="submit">Volver Index</button></a>
     <h2>Consultar clases con parametros</h2>
     <form name="formBuscar" method="post" action="buscar_clase.php">
         <p>
