@@ -74,7 +74,8 @@ $columns = mysqli_fetch_fields($resultado);
         echo "<td>" . $fila['dniAlumno'] . "</td>";
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
-        echo "<td> <button type='submit' formaction=''>Editar</button>";
+        echo "<td> <button type='submit' name='id' value='" . $idClase . "' 
+        formaction='modificar clase/formulario_modificar.php'>Editar</button>";
         echo "<p> <button type='submit' name='id' value='" . $idClase . "' 
         formaction='eliminar clase/eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
