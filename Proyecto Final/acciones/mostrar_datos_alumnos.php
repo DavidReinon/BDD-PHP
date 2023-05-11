@@ -1,8 +1,7 @@
 <?php
 require("conexion_BD.php");
 
-$consulta = "SELECT c.*, a.nombre, a.apellidos FROM clases c 
-INNER JOIN alumnos a ON c.dniAlumno = a.dni;";
+$consulta = "SELECT * FROM alumnos;";
 $resultado = ErrorConsulta($mysqli, $consulta)["resultado"];
 
 $columns = mysqli_fetch_fields($resultado);
@@ -16,41 +15,32 @@ $columns = mysqli_fetch_fields($resultado);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/mostrar_datos_tabla.css">
-    <title>Datos de CLASES</title>
+    <title>Datos de ALUMNOS</title>
 </head>
 
 <body>
-    <h1>Datos de CLASES</h1>
-    <form action="insert clase/crear_clase.html">
-        <button type="submit">Crear Nueva Clase</button>
+    <h1>Datos de ALUMNOS</h1>
+    <form action="insert alumno/crear_alumno.html">
+        <button type="submit">Nuevo Alumno</button>
     </form>
     <a href='../index.html'><button type="submit">Volver Index</button></a>
-    <h2>Consultar clases con parametros</h2>
+    <h2>Consultar ALUMNOS con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <p>
-        <h3>Clases:</h3>
-        <label for="dia">Dia:</label>
-        <input type="date" name="dia" id="dia" />
-
-        <label for="hora">Hora:</label>
-        <input type="time" name="hora" id="hora" />
-
-        <label for="sala">Sala:</label>
-        <input type="text" name="sala" id="sala" />
-
-        <label for="materia">Materia:</label>
-        <input type="text" name="materia" id="materia" />
-        </p>
-        <p>
-        <h3>Alumnos:</h3>
         <label for="dni">DNI:</label>
-        <input type="text" maxlength="9" name="dni" id="dni" />
+        <input type="text" name="dni" id="dni" maxlength="9"/>
 
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" />
 
         <label for="apellidos">Apellidos:</label>
         <input type="text" name="apellidos" id="apellidos" />
+
+        <label for="telefono">Telefono:</label>
+        <input type="number" name="telefono" id="telefono" maxlength="9"/>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
         </p>
         <p>
             <input type="submit" name="Buscar Clases" id="alta" value="Buscar Clases" />
@@ -66,19 +56,16 @@ $columns = mysqli_fetch_fields($resultado);
     echo "<th>Acciones</th>";
     echo "</tr>";
     while ($fila = mysqli_fetch_array($resultado)) {
-        $idClase = $fila['id'];
+        $dni = $fila['dni'];
         echo "<tr>";
-        echo "<td>" . $idClase . "</td>";
-        echo "<td>" . $fila['dia'] . "</td>";
-        echo "<td>" . $fila['hora'] . "</td>";
-        echo "<td>" . $fila['sala'] . "</td>";
-        echo "<td>" . $fila['materia'] . "</td>";
-        echo "<td>" . $fila['dniAlumno'] . "</td>";
+        echo "<td>" . $dni . "</td>";
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
-        echo "<td> <button type='submit' name='id' value='" . $idClase . "' 
+        echo "<td>" . $fila['telefono'] . "</td>";
+        echo "<td>" . $fila['fechaNacimiento'] . "</td>";
+        echo "<td> <button type='submit' name='id' value='" . $dni . "' 
         formaction='modificar clase/formulario_modificar.php'>Editar</button>";
-        echo "<p> <button type='submit' name='id' value='" . $idClase . "' 
+        echo "<p> <button type='submit' name='id' value='" . $dni . "' 
         formaction='eliminar clase/confirmacion_eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
