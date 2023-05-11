@@ -27,7 +27,7 @@
         <input type="time" name="hora" id="hora" />
 
         <label for="sala">Sala:</label>
-        <input type="text" name="sala" id="sala" />
+        <input type="text" name="sala" id="sala" maxlength="2"/>
 
         <label for="materia">Materia:</label>
         <input type="text" name="materia" id="materia" />
