@@ -26,7 +26,6 @@ $columns = mysqli_fetch_fields($resultado);
     <a href='../index.html'><button type="submit">Volver Index</button></a>
     <h2>Consultar ALUMNOS con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
-        <p>
         <label for="dni">DNI:</label>
         <input type="text" name="dni" id="dni" maxlength="9"/>
 
@@ -41,7 +40,6 @@ $columns = mysqli_fetch_fields($resultado);
 
         <label for="fechaNacimiento">Fecha de Nacimiento:</label>
         <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
-        </p>
         <p>
             <input type="submit" name="Buscar Clases" id="alta" value="Buscar Clases" />
         </p>

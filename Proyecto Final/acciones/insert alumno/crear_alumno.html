@@ -15,27 +15,37 @@
                 id="form1"
                 name="form1"
                 method="post"
-                action="crear_clase.php"
+                action="crear_alumno.php"
             >
+                <h1>Dar de alta alumno</h1>
                 <p>
-                    <label for="dia">Dia:</label>
-                    <input type="date" name="dia" id="dia" />
+                    <label for="dni">DNI:</label>
+                    <input type="text" name="dni" id="dni" maxlength="9" />
                 </p>
                 <p>
-                    <label for="hora">Hora:</label>
-                    <input type="time" name="hora" id="hora" />
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" />
                 </p>
                 <p>
-                    <label for="sala">Sala:</label>
-                    <input type="text" name="sala" id="sala" />
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" />
                 </p>
                 <p>
-                    <label for="materia">Materia:</label>
-                    <input type="text" name="materia" id="materia" />
+                    <label for="telefono">Telefono:</label>
+                    <input
+                        type="number"
+                        name="telefono"
+                        id="telefono"
+                        maxlength="9"
+                    />
                 </p>
                 <p>
-                    <label for="DNI Alumno">DNI Alumno:</label>
-                    <input type="text" maxlength="9" name="dni" id="dni" />
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input
+                        type="date"
+                        name="fechaNacimiento"
+                        id="fechaNacimiento"
+                    />
                 </p>
                 <p>
                     <input
