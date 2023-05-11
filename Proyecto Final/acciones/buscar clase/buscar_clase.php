@@ -12,8 +12,8 @@
 <body>
     <h1>Datos de CLASES</h1>
     <form action="../insert clase/crear_clase.html">
-        <button type="submit">Crear Nueva Clase</button>
-        <button type="submit" formaction="../mostrar_datos_clases.php">Volver a lista Completa</button>
+        <button type="submit">Nueva Clase</button>
+        <button type="submit" formaction="../mostrar_datos_clases.php">Volver Lista Completa</button>
     </form>
     <a href='../../Index.html'><button type="submit">Volver Index</button></a>
     <h2>Consultar clases con parametros</h2>

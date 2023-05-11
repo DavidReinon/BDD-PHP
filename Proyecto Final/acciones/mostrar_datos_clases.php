@@ -22,7 +22,7 @@ $columns = mysqli_fetch_fields($resultado);
 <body>
     <h1>Datos de CLASES</h1>
     <form action="insert clase/crear_clase.html">
-        <button type="submit">Crear Nueva Clase</button>
+        <button type="submit">Nueva Clase</button>
     </form>
     <a href='../index.html'><button type="submit">Volver Index</button></a>
     <h2>Consultar clases con parametros</h2>
