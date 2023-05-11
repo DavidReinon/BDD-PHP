@@ -9,8 +9,7 @@ $telefono = $_POST['telefono'];
 $fechaNacimiento = $_POST['fechaNacimiento'];
 
 $consulta = "INSERT INTO alumnos (dni, nombre, apellidos, telefono, fechaNacimiento) VALUES 
-('$dni', '$nombre', '$apellidos', '$telefono', '$fechaNacimiento')
-;";
+('$dni', '$nombre', '$apellidos', '$telefono', '$fechaNacimiento');";
 
 $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
