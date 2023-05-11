@@ -16,7 +16,7 @@ $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
 
 if ($error) {
-    echo "<br><a href='../Index.html'>Volver al index</a>";
+    echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";
     die();
 }
 echo "Base de datos creada 'academia' creada correctamente<br>";
@@ -33,7 +33,7 @@ $datos_consulta = ErrorConsulta($mysqli, $consulta);
 $error = $datos_consulta["bool"];
 
 if ($error) {
-    echo "<br><a href='../Index.html'>Volver al index</a>";
+    echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";
     die();
 }
 echo "Tabla 'alumnos' creada correctamente<br>";
@@ -54,4 +54,4 @@ $error = $datos_consulta["bool"];
 if (!$error) {
     echo "Tabla 'clases' creada correctamente<br>";
 }
-echo "<br><a href='../Index.html'>Volver al index</a>";
+echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";

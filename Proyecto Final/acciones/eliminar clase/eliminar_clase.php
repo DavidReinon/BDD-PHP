@@ -12,10 +12,8 @@ $error = $datos_consulta["bool"];
 
 if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "No se ha podido ejecutar la eliminacion de este registro.";
-    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
-    echo "<br><a href='../index.html'>Volver al index</a>";
 } elseif (!$error) {
     echo "Registro eliminado correctamente";
-    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
-    echo "<br><a href='../../Index.html'>Volver al index</a>";
 }
+echo "<br><a href='../mostrar_datos_clases.php'><button type='button'>Volver Lista Completa Clases</button></a>";
+echo "<br><a href='../../index.html'><button type='button'>Volver al index</button></a>";
