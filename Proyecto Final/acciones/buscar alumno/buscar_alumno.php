@@ -14,7 +14,7 @@
     <form action="insert alumno/crear_alumno.html">
         <button type="submit">Nuevo Alumno</button>
     </form>
-    <a href='../index.html'><button type="submit">Volver Index</button></a>
+    <a href='../mostrar_datos_alumnos.php'><button type="submit">Volver Lista</button></a>
     <h2>Buscar ALUMNOS con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <label for="dni">DNI:</label>
