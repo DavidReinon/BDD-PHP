@@ -24,7 +24,7 @@ $columns = mysqli_fetch_fields($resultado);
         <button type="submit">Nuevo Alumno</button>
     </form>
     <a href='../index.html'><button type="submit">Volver Index</button></a>
-    <h2>Consultar ALUMNOS con parametros</h2>
+    <h2>Buscar ALUMNOS con parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <label for="dni">DNI:</label>
         <input type="text" name="dni" id="dni" maxlength="9"/>
