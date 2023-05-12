@@ -27,7 +27,7 @@
         <input type="time" name="hora" id="hora" />
 
         <label for="sala">Sala:</label>
-        <input type="text" name="sala" id="sala" maxlength="2"/>
+        <input type="text" name="sala" id="sala" maxlength="2" />
 
         <label for="materia">Materia:</label>
         <input type="text" name="materia" id="materia" />
@@ -74,13 +74,13 @@
     }
 
     if (!empty($sala)) {
-        $sala = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($sala)));
+        $sala = ucwords($sala);
         $consulta .= " AND sala = '$sala'";
         $mostrarInfo .= "| Sala: $sala |";
     }
 
     if (!empty($materia)) {
-        $materia = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($materia)));
+        $materia = ucwords($materia);
         $consulta .= " AND materia = '$materia'";
         $mostrarInfo .= "| Materia: $materia |";
     }
@@ -91,13 +91,13 @@
     }
 
     if (!empty($nombre)) {
-        $nombre = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($nombre)));
+        $nombre = ucwords($nombre);
         $consulta .= " AND nombre = '$nombre'";
         $mostrarInfo .= "| Nombre: $nombre |";
     }
 
     if (!empty($apellidos)) {
-        $apellidos = ucwords(iconv('UTF-8', 'ASCII//TRANSLIT', strtolower($apellidos)));
+        $apellidos = ucwords($apellidos);
         $consulta .= " AND apellidos = '$apellidos'";
         $mostrarInfo .= "| Apellidos: $apellidos |";
     }
