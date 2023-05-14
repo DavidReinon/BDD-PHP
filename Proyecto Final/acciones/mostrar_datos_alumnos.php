@@ -61,9 +61,9 @@ $columns = mysqli_fetch_fields($resultado);
         echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td>" . $fila['telefono'] . "</td>";
         echo "<td>" . $fila['fechaNacimiento'] . "</td>";
-        echo "<td> <button type='submit' name='id' value='" . $dni . "' 
+        echo "<td> <button type='submit' name='dni' value='" . $dni . "' 
         formaction='modificar alumno/formulario_modificar.php'>Editar</button>";
-        echo "<p> <button type='submit' name='id' value='" . $dni . "' 
+        echo "<p> <button type='submit' name='dni' value='" . $dni . "' 
         formaction='eliminar alumno/confirmacion_eliminar_alumno.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
