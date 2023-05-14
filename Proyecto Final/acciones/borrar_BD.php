@@ -21,4 +21,4 @@ if ($error) {
     die();
 }
 echo "Base de datos borrada correctamente";
-echo "<a href='../index.html'><button type='button'>Volver al index</button></a>";
+echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";
