@@ -32,7 +32,7 @@
         <label for="fechaNacimiento">Fecha de Nacimiento:</label>
         <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
         <p>
-            <input type="submit" name="Buscar Clases" id="alta" value="Buscar Clases" />
+            <input type="submit" name="Buscar Alumnos" id="alta" value="Buscar Alumnos" />
         </p>
     </form>
     <?php
