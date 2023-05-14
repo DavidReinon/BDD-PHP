@@ -16,19 +16,19 @@ $columns = mysqli_fetch_fields($resultado);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Datos de CLASES</title>
+    <title>Lista de CLASES</title>
 </head>
 
 <body>
-    <h1>Datos de CLASES</h1>
+    <h1>Lista de CLASES</h1>
     <form action="insert clase/crear_clase.html">
         <button type="submit">Nueva Clase</button>
     </form>
     <a href='../index.html'><button type="submit">Volver Index</button></a>
-    <h2>Consultar clases con parametros</h2>
+    <h2>Buscar por parametros</h2>
     <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
         <p>
-        <h3>Clases:</h3>
+        <h3>Datos Clase:</h3>
         <label for="dia">Dia:</label>
         <input type="date" name="dia" id="dia" />
 
@@ -42,7 +42,7 @@ $columns = mysqli_fetch_fields($resultado);
         <input type="text" name="materia" id="materia" />
         </p>
         <p>
-        <h3>Alumnos:</h3>
+        <h3>Datos Alumno Asignado:</h3>
         <label for="dni">DNI:</label>
         <input type="text" maxlength="9" name="dni" id="dni" />
 

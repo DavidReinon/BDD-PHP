@@ -25,10 +25,10 @@ $fila = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-    <h2>Parametros a actualizar</h2>
+    <h1>Parametros a actualizar</h1>
     <form name="formBuscar" method="post" action="modificar_clase.php">
         <p>
-            <label for="id">ID CLASE:</label>
+            <label for="id"><b>ID CLASE</b></label>
             <input type="text" name="id" id="id" value="<?php echo $fila['id']; ?>" style="background-color: #39C726;" readonly />
         <h3>Datos Clase:</h3>
 

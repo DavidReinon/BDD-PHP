@@ -1,6 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
+echo "<link rel='stylesheet' href='../../css/styles.css' />";
 
 $dni = $_POST['dni'];
 
@@ -16,4 +17,3 @@ if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "Registro eliminado correctamente";
 }
 echo "<br><a href='../mostrar_datos_alumnos.php'><button type='button'>Lista Alumnos</button></a>";
-echo "<br><a href='../../index.html'><button type='button'>Index</button></a>";

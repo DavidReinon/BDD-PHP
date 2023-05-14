@@ -24,7 +24,7 @@ $fila = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-    <h2>Parametros a actualizar</h2>
+    <h1>Parametros a actualizar</h1>
     <form name="formModificar" method="post" action="modificar_alumno.php">
         <label for="dni">DNI:</label>
         <input type="text" name="dni" id="dni" maxlength="9" value="<?php echo $fila['dni']; ?>" style="background-color: #39C726;" readonly />
@@ -42,6 +42,6 @@ $fila = mysqli_fetch_assoc($resultado);
         <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo $fila['fechaNacimiento']; ?>" />
         <p>
         <p>
-            <input type="submit" name="ModificarAlumno" id="ModificarAlumno" value="ModificarAlumno" />
+            <input type="submit" name="ModificarAlumno" id="ModificarAlumno" value="Modificar Alumno" />
         </p>
     </form>

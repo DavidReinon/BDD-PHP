@@ -1,6 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
+echo "<link rel='stylesheet' href='../../css/styles.css' />";
 
 $dni = $_POST['dni'];
 $nombre = $_POST['nombre'];
@@ -16,9 +17,9 @@ $error = $datos_consulta["bool"];
 
 if ($error) {
     echo "El DNI introudcido ya existe";
-    echo "<br><a href='crear_alumno.html'><button type='button'>Volver a crear alumno</button></a>";
+    echo "<br><a href='crear_alumno.html'><button type='button'>Crear alumno</button></a>";
 } else {
     echo "Alumno creado correctamente";
 }
-echo "<br><a href='../mostrar_datos_alumnos.php'><button type='button'>Volver Lista Alumnado</button></a>";
-echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";
+echo "<br><a href='../mostrar_datos_alumnos.php'><button type='button'>Lista Alumnado</button></a>";
+

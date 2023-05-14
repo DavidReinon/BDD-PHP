@@ -1,6 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
+echo "<link rel='stylesheet' href='../../css/styles.css' />";
 
 $dia = $_POST['dia'];
 $hora = $_POST['hora'];
@@ -22,9 +23,8 @@ $error = $datos_consulta["bool"];
 
 if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "Ya existe una clase creada en esa sala a esa hora y dia.";
-    echo "<br><a href='../crear_clase.html'>Volver a crear clase</a>";
+    echo "<br><a href='crear_clase.html'><button type='button'>Volver a crear clase</button></a>";
 } elseif (!$error) {
     echo "Clase creada correctamente";
     echo "<br><a href='../mostrar_datos_clases.php'><button type='button'>Volver Lista Clases</button></a>";
 }
-echo "<br><a href='../index.html'><button type='button'>Volver al index</button></a>";

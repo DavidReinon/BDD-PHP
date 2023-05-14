@@ -15,16 +15,16 @@ $columns = mysqli_fetch_fields($resultado);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Datos de ALUMNOS</title>
+    <title>Lista de ALUMNOS</title>
 </head>
 
 <body>
-    <h1>Datos de ALUMNOS</h1>
+    <h1>Lista de ALUMNOS</h1>
     <form action="insert alumno/crear_alumno.html">
         <button type="submit">Nuevo Alumno</button>
     </form>
     <a href='../index.html'><button type="submit">Volver Index</button></a>
-    <h2>Buscar ALUMNOS con parametros</h2>
+    <h2>Buscar por parametros</h2>
     <form name="formBuscar" method="post" action="buscar alumno/buscar_alumno.php">
         <label for="dni">DNI:</label>
         <input type="text" name="dni" id="dni" maxlength="9" />

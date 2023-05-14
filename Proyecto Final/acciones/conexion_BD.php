@@ -1,6 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("funciones.php");
+echo "<link rel='stylesheet' href='../css/styles.css' />";
 
 $servidor = "localhost";
 $usuario = "root";

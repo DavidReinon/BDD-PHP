@@ -1,7 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
-
+echo "<link rel='stylesheet' href='../../css/styles.css' />";
 $id = $_POST['id'];
 
 $consulta = "DELETE FROM clases WHERE id = '$id'";
@@ -15,5 +15,4 @@ if ($resultado && mysqli_affected_rows($mysqli) == 0) {
 } elseif (!$error) {
     echo "Registro eliminado correctamente";
 }
-echo "<br><a href='../mostrar_datos_clases.php'><button type='button'>Volver Lista Completa Clases</button></a>";
-echo "<br><a href='../../index.html'><button type='button'>Volver al index</button></a>";
+echo "<br><a href='../mostrar_datos_clases.php'><button type='button'>Lista Clases</button></a>";

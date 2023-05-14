@@ -1,6 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR);
 require("../conexion_BD.php");
+echo "<link rel='stylesheet' href='../../css/styles.css' />";
 
 $dni = $_POST['dni'];
 
@@ -17,9 +18,7 @@ $error = $datos_consulta["bool"];
 
 if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "No se ha podido ejecutar la modificacion de este registro.";
-    echo "<br><a href='formulario_modificar.php'>Modificar De Nuevo</a>";
 } elseif (!$error) {
     echo "Registro modificado correctamente";
 }
-echo "<br><a href='../mostrar_datos_alumnos.php'>Volver a el registro completo de alumnos</a>";
-echo "<br><a href='../index.html'>Volver al index</a>";
+echo "<br><a href='../mostrar_datos_alumnos.php'><button type='button'>Lista Alumnado</button></a>";

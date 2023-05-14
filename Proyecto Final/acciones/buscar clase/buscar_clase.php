@@ -134,7 +134,7 @@
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td> <button id='btn-editar' type='submit' name='id' value='" . $idClase . "' 
-        formaction='modificar clase/formulario_modificar.php'>Editar</button>";
+        formaction='../modificar clase/formulario_modificar.php'>Editar</button>";
         echo "<p> <button id='btn-eliminar' type='submit' name='id' value='" . $idClase . "' 
         formaction='../eliminar clase/confirmacion_eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
