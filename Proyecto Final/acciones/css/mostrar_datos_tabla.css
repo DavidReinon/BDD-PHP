@@ -1,59 +1,96 @@
+/* Estilos para el título principal */
 body {
-    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+h1 {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Estilo para el botón de eliminar */
+  #btn-eliminar {
+    background-color: red;
+  }
+  
+  /* Estilo para el botón de editar */
+  #btn-editar {
+    background-color: rgb(55, 200, 219);
+  }
+  
+  /* Estilos para las tablas */
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  th {
+    background-color: green;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  /* Estilos para los formularios */
+  form {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  select {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    text-align: center;
-}
-
-#seleccion {
-    background-color: #1d1d1d;
-    color: #fff;
-}
-h1 {
-    margin-top: 0;
-}
-
-/* Estilos de la tabla */
-table {
-    margin-top: 50px;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #9b9b9b;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #9b9b9b;
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    border: 1px solid #9b9b9b;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    table {
-        font-size: 14px;
-    }
-
-    th,
-    td {
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
+  }
+  
+  input[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2a8f2a;
+  }
+  
