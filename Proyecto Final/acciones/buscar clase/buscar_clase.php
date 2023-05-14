@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mostrar_datos_tabla.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <title>Busqueda de CLASES</title>
 </head>
 
@@ -133,9 +133,9 @@
         echo "<td>" . $fila['dniAlumno'] . "</td>";
         echo "<td>" . $fila['nombre'] . "</td>";
         echo "<td>" . $fila['apellidos'] . "</td>";
-        echo "<td> <button type='submit' name='id' value='" . $idClase . "' 
+        echo "<td> <button id='btn-editar' type='submit' name='id' value='" . $idClase . "' 
         formaction='modificar clase/formulario_modificar.php'>Editar</button>";
-        echo "<p> <button type='submit' name='id' value='" . $idClase . "' 
+        echo "<p> <button id='btn-eliminar' type='submit' name='id' value='" . $idClase . "' 
         formaction='../eliminar clase/confirmacion_eliminar_clase.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";

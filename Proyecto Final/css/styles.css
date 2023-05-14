@@ -1,18 +1,19 @@
-/* Estilos para el título principal */
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-  }
+}
+
+/* Estilos para el título principal */
 h1 {
     background-color: green;
     color: white;
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
-  }
-  
-  /* Estilos para los botones */
-  button {
+}
+
+/* Estilos para los botones */
+button {
     background-color: green;
     color: white;
     border: none;
@@ -20,56 +21,67 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
-  
-  /* Estilo para el botón de eliminar */
-  #btn-eliminar {
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #499949;
+}
+
+/* Estilo para el botón de eliminar */
+#btn-eliminar {
     background-color: red;
-  }
-  
-  /* Estilo para el botón de editar */
-  #btn-editar {
+    &:hover {
+        background-color: #b20000;
+    }
+}
+
+/* Estilo para el botón de editar */
+#btn-editar {
     background-color: rgb(55, 200, 219);
-  }
-  
-  /* Estilos para las tablas */
-  table {
+    &:hover {
+        background-color: rgb(0, 162, 176);
+    }
+}
+
+/* Estilos para las tablas */
+table {
     border-collapse: collapse;
     margin: 0 auto;
     width: 80%;
-  }
-  
-  th {
+}
+
+th {
     background-color: green;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 10px;
     border: 1px solid black;
-  }
-  
-  td {
+}
+
+td {
     padding: 10px;
     border: 1px solid black;
-  }
-  
-  /* Estilos para los formularios */
-  form {
+}
+
+/* Estilos para los formularios */
+form {
     margin: 0 auto;
     width: 80%;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 5px;
     font-family: Arial, sans-serif;
-  }
-  
-  input[type="text"],
-  input[type="date"],
-  input[type="time"],
-  input[type="number"],
-  select {
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
     display: block;
     margin-bottom: 10px;
     width: 100%;
@@ -78,9 +90,9 @@ h1 {
     border-radius: 5px;
     font-family: Arial, sans-serif;
     font-size: 16px;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     background-color: green;
     color: white;
     border: none;
@@ -88,9 +100,27 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #2a8f2a;
-  }
-  
+    &:hover {
+        background-color: #499949;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

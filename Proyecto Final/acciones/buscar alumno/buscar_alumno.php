@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mostrar_datos_tabla.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <title>Datos de ALUMNOS</title>
 </head>
 
 <body>
     <h1>Datos de ALUMNOS</h1>
-    <form action="insert alumno/crear_alumno.html">
+    <form action="../insert alumno/crear_alumno.html">
         <button type="submit">Nuevo Alumno</button>
     </form>
     <a href='../mostrar_datos_alumnos.php'><button type="submit">Volver Lista</button></a>
@@ -103,9 +103,9 @@
         echo "<td>" . $fila['apellidos'] . "</td>";
         echo "<td>" . $fila['telefono'] . "</td>";
         echo "<td>" . $fila['fechaNacimiento'] . "</td>";
-        echo "<td> <button type='submit' name='dni' value='" . $dni . "' 
+        echo "<td> <button id='btn-editar' type='submit' name='dni' value='" . $dni . "' 
         formaction='../modificar alumno/formulario_modificar.php'>Editar</button>";
-        echo "<p> <button type='submit' name='dni' value='" . $dni . "' 
+        echo "<p> <button id='btn-eliminar' type='submit' name='dni' value='" . $dni . "' 
         formaction='../eliminar alumno/confirmacion_eliminar_alumno.php'>Eliminar</button><p>";
         echo "</td>";
         echo "</tr>";
