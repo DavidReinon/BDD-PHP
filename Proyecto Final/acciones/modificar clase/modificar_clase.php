@@ -19,10 +19,9 @@ $error = $datos_consulta["bool"];
 if ($resultado && mysqli_affected_rows($mysqli) == 0) {
     echo "No se ha podido ejecutar la modificacion de este registro.";
     echo "<br><a href='formulario_modificar.php'>Volver a el formulario de modificacion</a>";
-    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
-    echo "<br><a href='../index.html'>Volver al index</a>";
 } elseif (!$error) {
     echo "Registro modificado correctamente";
-    echo "<br><a href='../mostrar_datos_clases.php'>Volver a el registro completo de clases</a>";
-    echo "<br><a href='../index.html'>Volver al index</a>";
+
 }
+echo "<br><a href='../mostrar_datos_alumnos.php'>Volver a el registro completo de alumnos</a>";
+echo "<br><a href='../index.html'>Volver al index</a>";
