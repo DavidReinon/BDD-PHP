@@ -16,7 +16,7 @@
     </form>
     <a href='../mostrar_datos_alumnos.php'><button type="submit">Volver Lista</button></a>
     <h2>Buscar ALUMNOS con parametros</h2>
-    <form name="formBuscar" method="post" action="buscar clase/buscar_clase.php">
+    <form name="formBuscar" method="post" action="buscar_alumno.php">
         <label for="dni">DNI:</label>
         <input type="text" name="dni" id="dni" maxlength="9" />
 
